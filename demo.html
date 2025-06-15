@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Example</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p class="text hide">Hello from HTML</p>
+
+    <button class="showBtn" onclick="show()">Show</button>
+    <button class="hideBtn hide" onclick="hide()">Hide</button>
+
+    <script>
+        function show() {
+            console.log("Hello from show");
+            document.querySelector(".text").classList.remove("hide");        // Show the paragraph
+            document.querySelector(".hideBtn").classList.remove("hide");     // Show "Hide" button
+            document.querySelector(".showBtn").classList.add("hide");        // Hide "Show" button
+        }
+
+        function hide() {
+            console.log("Hello from hide");
+            document.querySelector(".text").classList.add("hide");           // Hide the paragraph
+            document.querySelector(".hideBtn").classList.add("hide");        // Hide "Hide" button
+            document.querySelector(".showBtn").classList.remove("hide");     // Show "Show" button
+        }
+    </script>
+</body>
+</html>
